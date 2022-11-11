@@ -29,20 +29,6 @@ The motivation for this project is to provide users and operators with a reliabl
 ### Project Requirements and User Stories
 To see the project requirements and the user stories, check the kanban board: https://github.com/users/davimnz/projects/1
 
-### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
 ### Installation
 
 1. `git clone https://github.com/davimnz/gsl-iot-project-2022.git`
