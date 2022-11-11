@@ -18,18 +18,18 @@
   - Gabriel Henrique Gobi (ITA)
   - Thiago Lopes de Araujo (ITA)
 
+## Motivation
+
+Natural disasters happen every year in tropical countries like Brazil and Mexico. In these situations, it is hard to seek for victims, since the terrain becomes difficult to seek (e.g., covered with mud in a flood or with rubble in a earthquake), and no internet connectivity is present. Therefore, we aim to develop a reliable computational infrastructure to help the victims of natural disasters, so they can inform its situation and position through a mobile application.
+
 ## About The Project
 
-This project consists in, during a natural disaster and through a mobile application, provide the users with an interface in which they provide their location, the level of danger their on as a basic text message.
-Through an MQQT client connected in a drone, for example, the data will be sent through several of these drones, redirecting the signal of each person to the local Crisis Management Center. This data (once processed and aggregated to a database) will be displayed in a dashboard in which the operators of the CMC will be able to see all of the signals and work on rescue operations.
+This project consists in, during a natural disaster and through a mobile application, provide the users with an interface in which they provide their location, the level of danger their on as a basic text message. Through an MQQT client connected in a drone, for example, the data will be sent through several of these drones, redirecting the signal of each person to the local Crisis Management Center. This data (once processed and aggregated to a database) will be displayed in a dashboard in which the operators of the Crisis Manegement Center will be able to see all of the signals and work on rescue operations.
 
-### Motivation
-The motivation for this project is to provide users and operators with a reliable infrastructure capable of dealing with the consequences caused by natural disasters, specifically floods and earthquakes from differentes geographic locations like Mexico or Brazil.
+## Project Requirements and User Stories
+To see the project requirements and the user stories, check the [Kanban board](https://github.com/users/davimnz/projects/1) in the projects session of the repository.
 
-### Project Requirements and User Stories
-To see the project requirements and the user stories, check the kanban board: https://github.com/users/davimnz/projects/1
-
-### Installation
+## Installation
 
 1. `git clone https://github.com/davimnz/gsl-iot-project-2022.git`
 
