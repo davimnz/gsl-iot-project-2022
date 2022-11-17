@@ -30,40 +30,57 @@ class App extends Component {
       port: 0,
       severity: '',
     };
-    // client.onConnectionLost = this.onConnectionLost;
-    // client.onMessageArrived = this.onMessageArrived;
+
+    this.client = null;
   }
 
   onConnectionLost = responseObject => {
-    // TODO: onConnectionLost
+    // TODO: console.log works. Just add a pop-up with the message
+    if (responseObject.errorCode !== 0) {
+      console.log(`Connection lost: ${responseObject.errorMessage}`);
+    }
+    this.unSubscribeTopic();
   };
 
   onMessageArrived = message => {
-    // TODO: onMessageArrived
+    // TODO: console.log works. Just add a pop-up with the message
+    console.log(`Message arrived: ${message.payloadString}`);
   };
 
   subscribeTopic = () => {
-    // TODO: subscribeTopic
+    this.client.subscribe(this.state.subscribedTopic);
   };
 
   onConnect = () => {
-    // TODO: onConnect
+    // TODO: console.log works. Just add a pop-up with the message
+    console.log(`Successfully established connection to ${this.state.ip}:${this.state.port}`);
+
+    // Make a subscription since a connection was established
+    this.state.subscribedTopic = 'rescue';
+    this.subscribeTopic();
   };
 
   onFailure = err => {
-    // TODO: onFailure
+    console.log(`Failure: ${err}.`);
   };
 
   connect = () => {
-    // TODO: connect
+    this.client = new Paho.MQTT.Client(this.state.ip, Number(this.state.port), '0');
+    this.client.onConnectionLost = this.onConnectionLost;
+    this.client.onMessageArrived = this.onMessageArrived;
+    this.client.connect({ onSuccess: this.onConnect });
   };
 
   unSubscribeTopic = () => {
-    // TODO: unSubscribeTopic
+    this.client.unsubscribe(this.state.subscribedTopic);
+    this.state.subscribedTopic = '';
   };
 
   sendMessage = () => {
-    // TODO: sendMessage
+    // TODO: sendMessage works. Just change the message to a meaningful one (follow the professor's protocol)
+    let clientMessage = new Paho.MQTT.Message("sample-message");
+    clientMessage.destinationName = 'rescue';
+    this.client.send(clientMessage);
   };
 
   render() {
