@@ -3,7 +3,7 @@
 /* eslint-disable no-undef */
 /* @flow */
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, TextInput} from 'react-native';
+import {View, Text, StyleSheet, TextInput, Alert} from 'react-native';
 
 import {Button} from '@rneui/base';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -32,19 +32,19 @@ class App extends Component {
     };
 
     this.client = null;
-  }
+  };
 
   onConnectionLost = responseObject => {
-    // TODO: console.log works. Just add a pop-up with the message
     if (responseObject.errorCode !== 0) {
       console.log(`Connection lost: ${responseObject.errorMessage}`);
+      Alert.alert("Connection Lost", "Please try to reconnect", [{ text: "OK"}])
     }
     this.unSubscribeTopic();
   };
 
   onMessageArrived = message => {
-    // TODO: console.log works. Just add a pop-up with the message
     console.log(`Message arrived: ${message.payloadString}`);
+    Alert.alert("Message Arrived", message.payloadString, [{ text: "OK"}])
   };
 
   subscribeTopic = () => {
@@ -52,8 +52,8 @@ class App extends Component {
   };
 
   onConnect = () => {
-    // TODO: console.log works. Just add a pop-up with the message
     console.log(`Successfully established connection to ${this.state.ip}:${this.state.port}`);
+    Alert.alert("You Are Connected", `Successfully established connection to ${this.state.ip}:${this.state.port}`, [{ text: "OK"}])
 
     // Make a subscription since a connection was established
     this.state.subscribedTopic = 'rescue';
