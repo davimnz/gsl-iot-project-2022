@@ -61,8 +61,7 @@ class App extends Component {
     Alert.alert("You Are Connected", `Successfully established connection to ${this.state.ip}:${this.state.port}`, [{ text: "OK"}])
 
     // Make a subscription since a connection was established
-    this.state.subscribedTopic = 'rescue';
-    this.subscribeTopic();
+    this.setState({subscribedTopic: 'rescue'}, this.subscribeTopic); 
   };
 
   onFailure = err => {
@@ -78,7 +77,7 @@ class App extends Component {
 
   unSubscribeTopic = () => {
     this.client.unsubscribe(this.state.subscribedTopic);
-    this.state.subscribedTopic = '';
+    this.setState({subscribedTopic: ''});
   };
 
   sendMessage = () => {
@@ -88,8 +87,8 @@ class App extends Component {
           return {...state, lat: info.coords.latitude, long: info.coords.longitude};
         }, () => {
           let clientMessage = new Paho.MQTT.Message(`${this.state.nodeId}:${this.state.severity}:${this.state.lat},${this.state.long}`);
-    clientMessage.destinationName = 'rescue';
-    this.client.send(clientMessage);
+          clientMessage.destinationName = 'rescue';
+          this.client.send(clientMessage);
         }
       );
     });
