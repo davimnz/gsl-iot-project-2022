@@ -90,7 +90,7 @@ class App extends Component {
           <Text style={styles.label}>Broker IP:</Text>
           <TextInput
             style={styles.input}
-            value={this.state.ip}
+            value={String(this.state.ip)}
             onChangeText={event => this.setState({ip: event})}
           />
         </View>
@@ -98,7 +98,7 @@ class App extends Component {
           <Text style={styles.label}>Broker Port:</Text>
           <TextInput
             style={styles.input}
-            value={this.state.port}
+            value={String(this.state.port)}
             onChangeText={event => this.setState({port: Number(event)})}
           />
         </View>
