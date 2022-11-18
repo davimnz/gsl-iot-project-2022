@@ -9,6 +9,8 @@ import {Button} from '@rneui/base';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import init from 'react_native_mqtt';
 
+import Geolocation from '@react-native-community/geolocation';
+
 init({
   size: 10000,
   storageBackend: AsyncStorage,
@@ -21,6 +23,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      nodeId: 'node-' + String(Math.floor(Math.random() * 100) + 1),
       topic: '',
       subscribedTopic: '',
       message: '',
@@ -29,6 +32,8 @@ class App extends Component {
       ip: '',
       port: 0,
       severity: '',
+      lat: 0.0,
+      long: 0.0
     };
 
     this.client = null;
@@ -77,10 +82,17 @@ class App extends Component {
   };
 
   sendMessage = () => {
-    // TODO: sendMessage works. Just change the message to a meaningful one (follow the professor's protocol)
-    let clientMessage = new Paho.MQTT.Message("sample-message");
+    Geolocation.getCurrentPosition(info => {
+      this.setState(
+        (state) => {
+          return {...state, lat: info.coords.latitude, long: info.coords.longitude};
+        }, () => {
+          let clientMessage = new Paho.MQTT.Message(`${this.state.nodeId}:${this.state.severity}:${this.state.lat},${this.state.long}`);
     clientMessage.destinationName = 'rescue';
     this.client.send(clientMessage);
+        }
+      );
+    });
   };
 
   render() {
