@@ -33,4 +33,11 @@ To see the project requirements and the user stories, check the [Kanban board](h
 
 1. `git clone https://github.com/davimnz/gsl-iot-project-2022.git`
 
+## Deliverables
+
+- Client and Edge Stage: 
+  
+  > the presentation of the completeness of delivery regarding the client and network can be viewed through the following link:
+  > https://drive.google.com/file/d/1aE8qR1RyihElATBoQanrAm80lTyvcDa4/view?usp=sharing
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
