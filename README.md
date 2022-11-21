@@ -13,6 +13,7 @@
   - Andrea Samantha Aguilar Ramírez (TEC)
   - Ana Valeria Pérez Pérez (TEC)
   - José Francisco Lara Delgado (TEC)
+  - Diego Andrés Figueroa Peart (TEC)
   - Alvaro Tedeschi Neto (ITA)
   - Davi Muniz Vasconcelos (ITA)
   - Gabriel Henrique Gobi (ITA)
