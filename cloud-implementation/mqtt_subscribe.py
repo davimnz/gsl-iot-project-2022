@@ -53,24 +53,19 @@ def disconnect_db(connection):
         
 def add_message(database, message):
     try:
-        nodeId = ''
         cursor = database.cursor()
-        listNode = message.split(':')
-        for char in range(5, len(listNode[0])):
-            nodeId = nodeId + listNode[0][char]
-            print("hello")
-        listNode[0] = nodeId
-        list_co = listNode[2].split(',')
         sql = "INSERT INTO messages (nodeId, severity, latitude, longitude) VALUES ('%s', '%s', '%s', '%s')"
-        values = (listNode[0], listNode[1], list_co[0], list_co[1])
+        #values = (int(listNode[0]), listNode[1], float(listNode[2]), float(listNode[3]))
+        values = (15, 'High', 19.3473711, -99.1303977) # Test to see if it inserts the values
         cursor.execute(sql, values)
         database.commit()
         print(cursor.rowcount, "Message added into the database")
+        
     except mysql.connector.Error as error:
         print("Fail to add values".format(error))
 
         
-###########################################################33 SQL part ends here
+########################################################### SQL part ends here
 
 def run():
     rescue = connect_mysql('20.196.216.210', 'iotTest', 'SQL_iot_123', 'rescue')
