@@ -41,3 +41,10 @@ To see the project requirements and the user stories, check the [Kanban board](h
   > https://drive.google.com/file/d/1aE8qR1RyihElATBoQanrAm80lTyvcDa4/view?usp=sharing
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+- Cloud Implementation stage: 
+  
+  > the presentation of the cloud implementation through a Python program and the use of an SQL Databse can be seen in:
+  > [https://drive.google.com/file/d/1lIf6yrpUf2LC-CPkCHGg42z8YCCDZjcB/view?usp=sharing]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
