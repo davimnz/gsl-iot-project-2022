@@ -1,7 +1,6 @@
 import random
 import mysql.connector
 from paho.mqtt import client as mqtt_client
-from sshtunnel import SSHTunnelForwarder
 from mysql.connector import Error
 
 broker = '20.196.216.210'
@@ -23,7 +22,8 @@ def connect_mqtt() -> mqtt_client:
 
 def subscribe(client: mqtt_client, database):
     def on_message(client, userdata, msg):
-        print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
+        print(f"Received `{msg.payload.decode()}` from `{msg.top_res}` topic")
+        addMessage(database, msg.payload.decode())
     client.subscribe(top_res)
     client.on_message = on_message
 
@@ -50,9 +50,9 @@ def disconnect_db(connection):
 def addMessage(connection, message):
     try:
         cursor = connection.cursor()
-        listmain = message.split(":")
+        messagelist = message.split(":")
         sqlSTR = 'INSERT INTO messages (nodeId, severity, latitude, longitude) VALUES (%s, %s, %s, %s)'
-        values = (int(listmain[0]), listmain[1], listmain[2], listmain[3])
+        values = (int(messagelist[0]),  messagelist[1],  messagelist[2],  messagelist[3])
         cursor.execute(sqlSTR, values)
         connection.commit()
         print(cursor.rowcount, "Message added into the database")
@@ -65,7 +65,6 @@ def run():
     dbconn = connect_mysql('20.196.216.210', 'iotTest', 'SQL_iot_123', 'rescue')
     client = connect_mqtt()
     message = subscribe(client, dbconn)
-    addMessage(dbconn, message)
     client.loop_forever()
 
 run()
