@@ -34,10 +34,14 @@ def subscribe(client: mqtt_client, database):
 ################################ SQL part starts here
 
 def connect_mysql(host, user, password, db):
-    dbconn = mysql.connector.connect(host=host, user=user, password=password, database=db)
+    dbconn = mysql.connector.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=db
+    )
     print('Connection to the database established')
     return dbconn
-
 
   
 def disconnect_db(connection):
