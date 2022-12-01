@@ -21,7 +21,29 @@
 
 ## Motivation
 
-Natural disasters happen every year in tropical countries like Brazil and Mexico. In these situations, it is hard to seek for victims, since the terrain becomes difficult to seek (e.g., covered with mud in a flood or with rubble in a earthquake), and no internet connectivity is present. Therefore, we aim to develop a reliable computational infrastructure to help the victims of natural disasters, so they can inform its situation and position through a mobile application.
+The occurrence of floods comprises a global problem, whose harm to populations reaches proportions that comprise a logistical challenge for the authorities responsible for dealing with such a situation.
+One of the main challenges comprises the mapping of the conditions of the problem, since the context of flooding shows extremely compromised visibility, with the need for constant overflights of rescue teams in order to be able to identify the location and condition of the victims.
+
+The scenario described can exemplified in different contexts in the current scenario (2021-2022), such as:
+- The flood that occurred on May 31, 2022 in the cities of Recife and Jaboatao dos Guararapes (Brazil), with at least 91 deaths and numerous missing persons:
+
+<img src="./readme-imgs/brazil-flood-impact.png"  style="display: block; margin: 0 auto; width:400px;"/>
+
+Whose information was extracted from:
+
+https://www.theguardian.com/world/2022/may/31/dozens-dead-in-brazil-floods-and-landslides-with-many-more-missing
+
+- Flood resulted in 17 deaths in hospital in the state of Hidalgo (Mexico) on September 7, 2021
+
+<img src="./readme-imgs/mexico-flood-impact.png"  style="display: block; margin: 0 auto; width:400px;"/>
+
+Whose information was extracted from: 
+
+https://www.reuters.com/world/americas/17-people-die-mexican-hospital-due-severe-flooding-2021-09-07/
+
+In this vein, the motivation for this project is shown as an alternative in order to provide an application whose purpose is to facilitate the mapping of the number of existing victims and their locations, as well as the severity of the situation in which they find themselves.
+
+With this objective in mind, the creation of a communication structure via mobile application associated with a communication network via drones with a crisis control station is seen as a promising alternative, given the availability of mobile equipment, in association with the capacity of drones being designed to fly over heavy rain scenarios and promote a mobile message routing system. The crisis management center, in turn, is capable of receiving information from the victims themselves and graphically mapping the rescue requests by position and severity of the individual's situation, considerably increasing the effectiveness of the rescue teams.
 
 ## About The Project
 
