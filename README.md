@@ -30,9 +30,23 @@ This project consists in, during a natural disaster and through a mobile applica
 ## Project Requirements and User Stories
 To see the project requirements and the user stories, check the [Kanban board](https://github.com/users/davimnz/projects/1) in the projects session of the repository.
 
-## Installation
+## Installation and Setup
 
 1. `git clone https://github.com/davimnz/gsl-iot-project-2022.git`
+
+### MySQL setup
+Since MySQL doesn't accept remote connections (other than local ones), we need to create a user specifically for managing the database from a remote user:
+  - First we need to change the MySQL configuration to disable only local connections in `/etc/mysql/mysql.conf.d/mysqld.cnf`
+  - In the file, search for the line `bind-address = 127.0.0.1` and comment it
+  - Then restart MySQL: `sudo systemctl restart mysql`
+  - We now access the MySQL console with: `sudo mysql -u root -p`
+  - Now we create a new remote user: ``CREATE USER 'USERNAME'@'IPADDRESS' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
+  #### NOTE: We can create a remote user from any IP address with `'USERNAME'@'%'` although this is not recommended for security reasons
+  - Now we grant the user with access to the database we are going to use: `GRANT ALL PRIVILEGES ON databasename to 'USERNAME'@'IPADDRESS';`
+This proccess will allow us to accessthe database from a remote machine, in this case this process is necessary for the Python program to acces the remote SQL database.
+
+### Python Setup
+To use Python with MySQL we need to install the correspondent dependencies with: `pip install mysql-connector-python`
 
 ## Deliverables
 
