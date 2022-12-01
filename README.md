@@ -33,7 +33,7 @@ Whose information was extracted from:
 
 https://www.theguardian.com/world/2022/may/31/dozens-dead-in-brazil-floods-and-landslides-with-many-more-missing
 
-- Flood resulted in 17 deaths in hospital in the state of Hidalgo (Mexico) on September 7, 2021
+- Flood resulted in seventeen deaths in hospital in the central Mexican state of Hidalgo on September 7, 2021:
 
 <img src="./readme-imgs/mexico-flood-impact.png"  style="display: block; margin: 0 auto; width:400px;"/>
 
