@@ -18,6 +18,7 @@
   - Davi Muniz Vasconcelos (ITA)
   - Gabriel Henrique Gobi (ITA)
   - Thiago Lopes de Araujo (ITA)
+  - Alexandre Bergonsi Bernat (ITA)
 
 ## Motivation
 
@@ -69,6 +70,26 @@ This proccess will allow us to accessthe database from a remote machine, in this
 
 ### Python Setup
 To use Python with MySQL we need to install the correspondent dependencies with: `pip install mysql-connector-python`
+
+### VM's Setup
+1. Follow the Professor Marconde's tutorial on how to setup the Mininet Virtual Machine (Ubuntu with Mininet-wifi and mosquitto installed): 
+    https://www.dropbox.com/s/bkib6vzqvfhpmtj/mininet-wifi-project-TEC-2022.mp4?dl=0
+2. Change the Network Adaptor 2 'connected to' configuration to "Board in Bridge Mode".
+3. Start the VM on virtual box.
+4. Use two terminal inside this VM: one supposed to run the central configuration Mosquitto file; other one supposed to run the bridge's configuration file.
+- For the central configuration file: `mosquitto -c mosquitto.conf -v`
+- For the bridge configuration file: `mosquitto mosquitto_bridge.conf -v`
+- REMINDER: for those commands to work, both config files should be in the present directory.
+  
+
+### Celular Setup
+1. Follow the Professor Barreto's tutorial on how to configure MQTT with React Native for your operating system:
+  https://github.com/kabartsjc/gsl-iot-2022/blob/main/templates/android/Android_Client_React_Native_Tutorial.pdf
+2. Open the client folder: `cd /client`
+3. Run the commands on it's README file:
+    `npm install --force`
+    `npx react-native start`
+    `npx react-native run-android`
 
 ## Deliverables
 
