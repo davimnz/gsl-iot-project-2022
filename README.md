@@ -102,18 +102,21 @@ To use Python with MySQL we need to install the correspondent dependencies with:
   
   > the presentation of the completeness of delivery regarding the client and network can be viewed through the following link:
   > https://drive.google.com/file/d/1aE8qR1RyihElATBoQanrAm80lTyvcDa4/view?usp=sharing
+  > https://youtu.be/yVfZ9nq_cFc
 
 ##
 - Cloud Implementation stage: 
   
   > the presentation of the cloud implementation through a Python program and the use of an SQL Databse can be seen in:
   > [https://drive.google.com/file/d/1lIf6yrpUf2LC-CPkCHGg42z8YCCDZjcB/view?usp=sharing]
+  > Link: https://youtu.be/KCEq87psbH0
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- Final presentation
+- Final Workshop
 
   - [Presentation](final-presentation/final-presentation-workshop.pdf)
+  - https://youtu.be/TcdbeCW2Acs
   
   ##
 - Youtube Channel:
