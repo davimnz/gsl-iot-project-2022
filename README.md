@@ -110,3 +110,7 @@ To use Python with MySQL we need to install the correspondent dependencies with:
   > [https://drive.google.com/file/d/1lIf6yrpUf2LC-CPkCHGg42z8YCCDZjcB/view?usp=sharing]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+- Final presentation
+
+  - [Presentation](final-presentation/final-presentation-workshop.pdf)
