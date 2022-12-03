@@ -14,11 +14,11 @@
   - Ana Valeria Pérez Pérez (TEC)
   - José Francisco Lara Delgado (TEC)
   - Diego Andrés Figueroa Peart (TEC)
+  - Alexandre Bergonsi Bernat (ITA)
   - Alvaro Tedeschi Neto (ITA)
   - Davi Muniz Vasconcelos (ITA)
   - Gabriel Henrique Gobi (ITA)
   - Thiago Lopes de Araujo (ITA)
-  - Alexandre Bergonsi Bernat (ITA)
 
 ## Motivation
 
@@ -53,6 +53,12 @@ This project consists in, during a natural disaster and through a mobile applica
 ## Project Requirements and User Stories
 To see the project requirements and the user stories, check the [Kanban board](https://github.com/users/davimnz/projects/1) in the projects session of the repository.
 
+## Architecture
+
+<p align="center">
+    <img src="readme-imgs/architecture.png" alt="">
+</p>
+
 ## Installation and Setup
 
 1. `git clone https://github.com/davimnz/gsl-iot-project-2022.git`
@@ -81,7 +87,6 @@ To use Python with MySQL we need to install the correspondent dependencies with:
 - For the bridge configuration file: `mosquitto mosquitto_bridge.conf -v`
 - REMINDER: for those commands to work, both config files should be in the present directory.
   
-
 ### Celular Setup
 1. Follow the Professor Barreto's tutorial on how to configure MQTT with React Native for your operating system:
   https://github.com/kabartsjc/gsl-iot-2022/blob/main/templates/android/Android_Client_React_Native_Tutorial.pdf
